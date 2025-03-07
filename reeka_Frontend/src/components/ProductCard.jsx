@@ -1,10 +1,10 @@
 import React from 'react';
 
 const ProductCard = ({ property, onUpdatePriceClick }) => {
-  //console.log("This is the new property: ",property?.priceOverrides)
-  const updatedPrice = (property?.priceOverrides && property?.priceOverrides?.length) ? property?.priceOverrides[property?.priceOverrides.length - 1]?.price : property.basePrice;
-  //const updatedPrice = property.basePrice;
-  console.log("updatedPrice: ", updatedPrice)
+  
+  // const updatedPrice = (property?.priceOverrides && property?.priceOverrides?.length) ? property?.priceOverrides[property?.priceOverrides.length - 1]?.price : property.basePrice;
+  const updatedPrice = property.basePrice;
+  
   return (
     <div className="product-card" data-aos="zoom-in" data-aos-delay="100">
       <img src={property.image || '/images/beach.jpg'} alt={property.name} className="img-fluid" />

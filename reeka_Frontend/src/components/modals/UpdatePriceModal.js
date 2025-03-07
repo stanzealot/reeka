@@ -6,8 +6,8 @@ import { Spin } from 'antd';
 import { toast } from 'react-toastify';
 
 const UpdatePriceModal = ({ property, setIsModalOpen,onPriceUpdate }) => {
-   const updatedPrice  = (property?.priceOverrides && property?.priceOverrides?.length) ? property?.priceOverrides[property?.priceOverrides.length - 1]?.price : property.basePrice;
-//const updatedPrice = property.basePrice;
+  //  const updatedPrice  = (property?.priceOverrides && property?.priceOverrides?.length) ? property?.priceOverrides[property?.priceOverrides.length - 1]?.price : property.basePrice;
+  const updatedPrice = property.basePrice;
   const [date, setDate] = useState('');
   const [price, setPrice] = useState(updatedPrice);
   const [startDate, setStartDate] = useState('');
@@ -20,7 +20,7 @@ const UpdatePriceModal = ({ property, setIsModalOpen,onPriceUpdate }) => {
     e.preventDefault();
     setLoading(true); // Start loading
     try {
-      const response = await axios.post('http://localhost:4000/api/property/update-price', {
+      const response = await axios.post('https://backend-project-64rz.onrender.com/api/property/update-price', {
         propertyId: property.id,
         date,
         price,

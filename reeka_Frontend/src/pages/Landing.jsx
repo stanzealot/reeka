@@ -47,7 +47,7 @@ function Landing() {
    const fetchProperties = async () => {
     setLoading(true); // Start loading
     try {
-      const response = await axios.get('http://localhost:4000/api/property');
+      const response = await axios.get('https://backend-project-64rz.onrender.com/api/property');
       setProperties(response.data);
       console.log('Data fetched:', response.data);
     } catch (error) {
