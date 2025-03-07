@@ -1,0 +1,26 @@
+.overlay {
+    background: url(../../../assets/img/comingsoon.jpg)no-repeat center center/cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    animation: zoomIn 0.3s linear;
+
+}  
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 24px 24px 24px;
+    gap: 16px;
+    width: 100%;
+    max-width: 544px;
+    position: fixed;
+    animation: fadeInRight 0.3s linear;
+
+    border-radius: 12px;
+    background: var(--base-white, #fff);
+    box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03),
+      0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+}
